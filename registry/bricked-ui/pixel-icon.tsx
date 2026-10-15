@@ -21,7 +21,27 @@ export const ICONS = {
   close: ["1000001", "0100010", "0010100", "0001000", "0010100", "0100010", "1000001"],
   user: ["0011100", "0111110", "0111110", "0011100", "0000000", "1111111", "1111111"],
   search: ["0111000", "1000100", "1000100", "1000100", "0111010", "0000101", "0000010"],
-  code: ["0000000", "0010100", "0100010", "1000001", "0100010", "0010100", "0000000"]
+  code: ["0000000", "0010100", "0100010", "1000001", "0100010", "0010100", "0000000"],
+  // Exception to the 7x7 rule: the GitHub mark needs a 16x16 canvas to read.
+  // PixelIcon sizes itself from the grid, so mixed sizes just work.
+  github: [
+    "0000011111100000",
+    "0001111111111000",
+    "0011111111111100",
+    "0111011111101110",
+    "0111000000001110",
+    "1111000000001111",
+    "1110000000000111",
+    "1110000000000111",
+    "1110000000000111",
+    "1110000000000111",
+    "1111000000001111",
+    "0111110000111110",
+    "0110110000111110",
+    "0011000000111100",
+    "0001110000111000",
+    "0000010000100000",
+  ],
 } as const;
 
 export type PixelIconName = keyof typeof ICONS;
@@ -38,15 +58,20 @@ export function PixelIcon({
   className?: string;
 }) {
   const grid = ICONS[name];
+  const cols = grid[0].length;
+  const rows = grid.length;
   return (
     <svg
       data-size={size}
       data-variant={variant}
       className={
-        "bricked-icon block h-[calc(var(--icon,4px)*7)] w-[calc(var(--icon,4px)*7)] shrink-0" +
-        (className ? ` ${className}` : "")
+        "bricked-icon block shrink-0" + (className ? ` ${className}` : "")
       }
-      viewBox="0 0 7 7"
+      style={{
+        width: `calc(var(--icon, 4px) * ${cols})`,
+        height: `calc(var(--icon, 4px) * ${rows})`,
+      }}
+      viewBox={`0 0 ${cols} ${rows}`}
       shapeRendering="crispEdges"
       aria-hidden="true"
     >
