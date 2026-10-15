@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #2b1100;
+  --color-shade: #c25a00;
+  --color-brick: #ff8a1f;
+  --color-brick-hover: #ff9a3d;
+  --color-field: #fff6ea;
+  --color-peach: #ffd3a1;
+  --color-peach-deep: #f1b97c;
+  --color-muted: #9a6a3c;
+  --color-deep: #a24a00;
+  --color-on-dark: #ffd9b0;
+  --color-on-dark-accent: #ffb36b;
+  --color-heart: #d63a1f;
+  --font-pixel: "Press Start 2P", ui-monospace, "Courier New", monospace;
+  --font-body: "VT323", ui-monospace, "Courier New", monospace;
+  --radius-*: initial;
+  --shadow-*: initial;
+}
+
+:root {
+  --bricks: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 8' preserveAspectRatio='none' shape-rendering='crispEdges'%3E%3Cg fill='%23a24a00' fill-opacity='.3'%3E%3Crect width='16' height='1'/%3E%3Crect y='4' width='16' height='1'/%3E%3Crect width='1' height='4'/%3E%3Crect x='8' y='4' width='1' height='4'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+@utility bk-cut {
+  --cut: 2px;
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--cut) * 4) 0,
+    calc(100% - var(--cut) * 4) var(--cut),
+    calc(100% - var(--cut) * 3) var(--cut),
+    calc(100% - var(--cut) * 3) calc(var(--cut) * 2),
+    calc(100% - var(--cut) * 2) calc(var(--cut) * 2),
+    calc(100% - var(--cut) * 2) calc(var(--cut) * 3),
+    calc(100% - var(--cut)) calc(var(--cut) * 3),
+    calc(100% - var(--cut)) calc(var(--cut) * 4),
+    100% calc(var(--cut) * 4),
+    100% 100%,
+    calc(var(--cut) * 4) 100%,
+    calc(var(--cut) * 4) calc(100% - var(--cut)),
+    calc(var(--cut) * 3) calc(100% - var(--cut)),
+    calc(var(--cut) * 3) calc(100% - var(--cut) * 2),
+    calc(var(--cut) * 2) calc(100% - var(--cut) * 2),
+    calc(var(--cut) * 2) calc(100% - var(--cut) * 3),
+    var(--cut) calc(100% - var(--cut) * 3),
+    var(--cut) calc(100% - var(--cut) * 4),
+    0 calc(100% - var(--cut) * 4)
+  );
+}
+
+@utility bk-bricks {
+  background-color: var(--color-brick);
+  background-image: var(--bricks);
+  background-size: 36px 18px;
+  background-position: center;
+  image-rendering: pixelated;
+}
+
+@utility bk-raised {
+  box-shadow: inset -4px -4px 0 var(--color-shade);
+}
+
+@utility bk-sunken {
+  box-shadow: inset 4px 4px 0 var(--color-shade);
+}
