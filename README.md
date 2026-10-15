@@ -1,6 +1,7 @@
-# Bricked UI - registry
+# Bricked UI - registry + Svelte
 
-The shadcn registry source for Bricked UI: 92 pixel-art components for React.
+The shadcn registry source for Bricked UI: 92 pixel-art components for React,
+plus a Svelte 5 port (50 components) under `svelte/`.
 This repo holds the **source**. The built JSON is published through the
 [website](https://github.com/bricked-ui/website) at
 `https://bricked-ui.vercel.app/r/`.
@@ -12,15 +13,39 @@ ui/
   registry.json            # catalog: every item, its files and dependencies
   components.json          # shadcn aliases (@/components, @/lib/utils, ...)
   registry/bricked-ui/     # one .tsx per component + pixel-icon, styles
-  lib/utils.ts             # cn()
+  svelte/                  # Svelte 5 port (bun + svelte-check + svelte-package)
+    package.json           # name: bricked-ui-svelte
+    src/lib/components/    # one .svelte per component (PixelIcon, Button, ...)
+    src/lib/icons.ts       # ICONS grid + PixelIconName
+    src/lib/utils.ts       # cn()
+    src/lib/bricked.css    # framework-agnostic bk-* stylesheet (mirrors registry bricked.css)
+    src/lib/index.ts       # barrel exports
+  lib/utils.ts             # cn() (React)
   DESIGN.md                # the full style specification
 ```
 
 ## Install a piece
 
+React (shadcn):
+
 ```sh
 bunx shadcn registry add @bricked=https://bricked-ui.vercel.app/r/{name}.json  # once
 bunx shadcn add @bricked/button
+```
+
+Svelte:
+
+```sh
+bun add bricked-ui-svelte   # or copy ui/svelte/src/lib/components/*.svelte
+```
+
+```svelte
+<script>
+  import { Button } from "bricked-ui-svelte";
+  import "bricked-ui-svelte/bricked.css";
+</script>
+
+<Button icon="rocket">Launch</Button>
 ```
 
 Or without a namespace:

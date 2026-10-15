@@ -1,0 +1,774 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry.json",
+  "name": "bricked-svelte",
+  "homepage": "https://bricked-ui.vercel.app",
+  "items": [
+    {
+      "name": "pixel-icon",
+      "type": "registry:ui",
+      "title": "Pixel Icon",
+      "description": "20 crisp 7x7 pixel icons as SVG rects. Every component takes one via the icon prop.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/lib/components/pixel-icon.svelte",
+          "type": "registry:ui"
+        },
+        {
+          "path": "./src/lib/components/icons.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "accordion",
+      "type": "registry:ui",
+      "title": "Accordion",
+      "description": "Field headers, orange when open.",
+      "dependencies": [],
+      "registryDependencies": [
+        "local:pixel-icon"
+      ],
+      "files": [
+        {
+          "path": "./src/lib/components/accordion.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "alert",
+      "type": "registry:ui",
+      "title": "Alert",
+      "description": "Dark alert with title and body.",
+      "dependencies": [],
+      "registryDependencies": [
+        "local:pixel-icon"
+      ],
+      "files": [
+        {
+          "path": "./src/lib/components/alert.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "avatar",
+      "type": "registry:ui",
+      "title": "Avatar",
+      "description": "Orange or dark 48px avatar.",
+      "dependencies": [],
+      "registryDependencies": [
+        "local:pixel-icon"
+      ],
+      "files": [
+        {
+          "path": "./src/lib/components/avatar.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "badge",
+      "type": "registry:ui",
+      "title": "Badge",
+      "description": "Orange or dark pixel badge.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/lib/components/badge.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "banner",
+      "type": "registry:ui",
+      "title": "Banner",
+      "description": "Orange announcement bar.",
+      "dependencies": [],
+      "registryDependencies": [
+        "local:pixel-icon"
+      ],
+      "files": [
+        {
+          "path": "./src/lib/components/banner.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "breadcrumbs",
+      "type": "registry:ui",
+      "title": "Breadcrumbs",
+      "description": "Links with separators, current page tag.",
+      "dependencies": [],
+      "registryDependencies": [
+        "local:pixel-icon"
+      ],
+      "files": [
+        {
+          "path": "./src/lib/components/breadcrumbs.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Button",
+      "description": "Brick button + square icon-button variant. sm/md/lg, primary/dark, left/right icon slots.",
+      "dependencies": [],
+      "registryDependencies": [
+        "local:pixel-icon"
+      ],
+      "files": [
+        {
+          "path": "./src/lib/components/button.svelte",
+          "type": "registry:ui"
+        },
+        {
+          "path": "./src/lib/components/icon-button.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "calendar",
+      "type": "registry:ui",
+      "title": "Calendar",
+      "description": "Month grid with selected day.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/lib/components/calendar.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "card",
+      "type": "registry:ui",
+      "title": "Card",
+      "description": "Peach card with brick header and body.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/lib/components/card.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:ui",
+      "title": "Checkbox",
+      "description": "28px sunken box, orange when checked.",
+      "dependencies": [],
+      "registryDependencies": [
+        "local:pixel-icon"
+      ],
+      "files": [
+        {
+          "path": "./src/lib/components/checkbox.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chips",
+      "type": "registry:ui",
+      "title": "Chips",
+      "description": "Removable field tags.",
+      "dependencies": [],
+      "registryDependencies": [
+        "local:pixel-icon"
+      ],
+      "files": [
+        {
+          "path": "./src/lib/components/chips.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "clock",
+      "type": "registry:ui",
+      "title": "Clock",
+      "description": "Live 24h dark clock.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/lib/components/clock.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "code-block",
+      "type": "registry:ui",
+      "title": "Code block",
+      "description": "Dark code with keyword/string tinting.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/lib/components/code-block.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "counter",
+      "type": "registry:ui",
+      "title": "Counter",
+      "description": "Minus/plus stepper around a value box.",
+      "dependencies": [],
+      "registryDependencies": [
+        "local:pixel-icon"
+      ],
+      "files": [
+        {
+          "path": "./src/lib/components/counter.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "data-table",
+      "type": "registry:ui",
+      "title": "Data table",
+      "description": "Orange header table.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/lib/components/data-table.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dice",
+      "type": "registry:ui",
+      "title": "Dice",
+      "description": "Rollable 72px die.",
+      "dependencies": [],
+      "registryDependencies": [
+        "local:button",
+        "local:pixel-icon"
+      ],
+      "files": [
+        {
+          "path": "./src/lib/components/dice.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "divider",
+      "type": "registry:ui",
+      "title": "Divider",
+      "description": "Pixel dashed divider with label.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/lib/components/divider.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu",
+      "type": "registry:ui",
+      "title": "Dropdown menu",
+      "description": "Trigger plus dark menu list.",
+      "dependencies": [],
+      "registryDependencies": [
+        "local:button",
+        "local:pixel-icon"
+      ],
+      "files": [
+        {
+          "path": "./src/lib/components/dropdown-menu.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dropzone",
+      "type": "registry:ui",
+      "title": "Dropzone",
+      "description": "File drop label plus compact file input.",
+      "dependencies": [],
+      "registryDependencies": [
+        "local:pixel-icon"
+      ],
+      "files": [
+        {
+          "path": "./src/lib/components/dropzone.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "empty-state",
+      "type": "registry:ui",
+      "title": "Empty state",
+      "description": "Sunken empty slot with icon, text and action.",
+      "dependencies": [],
+      "registryDependencies": [
+        "local:pixel-icon"
+      ],
+      "files": [
+        {
+          "path": "./src/lib/components/empty-state.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "field",
+      "type": "registry:ui",
+      "title": "Field",
+      "description": "Label, control wrapper and hint/error line.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/lib/components/field.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "fortune",
+      "type": "registry:ui",
+      "title": "Ask the wall",
+      "description": "Random answer box.",
+      "dependencies": [],
+      "registryDependencies": [
+        "local:button"
+      ],
+      "files": [
+        {
+          "path": "./src/lib/components/fortune.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "health-meter",
+      "type": "registry:ui",
+      "title": "Health meter",
+      "description": "Ten-segment HP bar.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/lib/components/health-meter.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "title": "Input",
+      "description": "Sunken field input plus search and date variants.",
+      "dependencies": [],
+      "registryDependencies": [
+        "local:pixel-icon"
+      ],
+      "files": [
+        {
+          "path": "./src/lib/components/input.svelte",
+          "type": "registry:ui"
+        },
+        {
+          "path": "./src/lib/components/search-input.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "keycap",
+      "type": "registry:ui",
+      "title": "Keycap",
+      "description": "Field kbd chips with separators.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/lib/components/keycap.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "launch-pad",
+      "type": "registry:ui",
+      "title": "Launch pad",
+      "description": "Sky box with flying rocket.",
+      "dependencies": [],
+      "registryDependencies": [
+        "local:button",
+        "local:pixel-icon"
+      ],
+      "files": [
+        {
+          "path": "./src/lib/components/launch-pad.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "like-button",
+      "type": "registry:ui",
+      "title": "Like button",
+      "description": "Field-surface like with heart burst and count.",
+      "dependencies": [],
+      "registryDependencies": [
+        "local:pixel-icon"
+      ],
+      "files": [
+        {
+          "path": "./src/lib/components/like-button.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "list-group",
+      "type": "registry:ui",
+      "title": "List group",
+      "description": "Selectable field list.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/lib/components/list-group.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "modal",
+      "type": "registry:ui",
+      "title": "Modal",
+      "description": "Overlay dialog. See also sheet, drawer, alert-dialog.",
+      "dependencies": [],
+      "registryDependencies": [
+        "local:pixel-icon"
+      ],
+      "files": [
+        {
+          "path": "./src/lib/components/modal.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "pagination",
+      "type": "registry:ui",
+      "title": "Pagination",
+      "description": "Page buttons with prev/next.",
+      "dependencies": [],
+      "registryDependencies": [
+        "local:pixel-icon"
+      ],
+      "files": [
+        {
+          "path": "./src/lib/components/pagination.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "progress",
+      "type": "registry:ui",
+      "title": "Progress",
+      "description": "Segmented bar plus square ring gauge.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/lib/components/progress.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "radio",
+      "type": "registry:ui",
+      "title": "Radio",
+      "description": "Octagon radio with dot icon.",
+      "dependencies": [],
+      "registryDependencies": [
+        "local:pixel-icon"
+      ],
+      "files": [
+        {
+          "path": "./src/lib/components/radio.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "rating",
+      "type": "registry:ui",
+      "title": "Rating",
+      "description": "Five star radio buttons.",
+      "dependencies": [],
+      "registryDependencies": [
+        "local:pixel-icon"
+      ],
+      "files": [
+        {
+          "path": "./src/lib/components/rating.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ring-loader",
+      "type": "registry:ui",
+      "title": "Ring loader",
+      "description": "Blinking 8-cube ring, plain or with label.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/lib/components/ring-loader.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "select",
+      "type": "registry:ui",
+      "title": "Select",
+      "description": "Native select plus styled native-select variant.",
+      "dependencies": [],
+      "registryDependencies": [
+        "local:pixel-icon"
+      ],
+      "files": [
+        {
+          "path": "./src/lib/components/select.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "skeleton",
+      "type": "registry:ui",
+      "title": "Skeleton",
+      "description": "Pulsing box plus lines.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/lib/components/skeleton.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "slider",
+      "type": "registry:ui",
+      "title": "Slider",
+      "description": "Range with orange fill and ink thumb.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/lib/components/slider.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "stacking-loader",
+      "type": "registry:ui",
+      "title": "Stacking loader",
+      "description": "Three dropping bricks.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/lib/components/stacking-loader.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "stat-card",
+      "type": "registry:ui",
+      "title": "Stat card",
+      "description": "Dark stat with label, value and badge slot.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/lib/components/stat.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "stepper",
+      "type": "registry:ui",
+      "title": "Stepper",
+      "description": "Numbered steps with connectors.",
+      "dependencies": [],
+      "registryDependencies": [
+        "local:pixel-icon"
+      ],
+      "files": [
+        {
+          "path": "./src/lib/components/stepper.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "switch",
+      "type": "registry:ui",
+      "title": "Switch",
+      "description": "Off/On two-half track switch plus single toggle.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/lib/components/switch.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "title": "Tabs",
+      "description": "Brick tabs with sunken field panel.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/lib/components/tabs.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "textarea",
+      "type": "registry:ui",
+      "title": "Textarea",
+      "description": "Sunken multiline field.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/lib/components/textarea.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "timeline",
+      "type": "registry:ui",
+      "title": "Timeline",
+      "description": "Markers with shade connectors.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/lib/components/timeline.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "toast",
+      "type": "registry:ui",
+      "title": "Toast",
+      "description": "Dark toast with icon and dismiss.",
+      "dependencies": [],
+      "registryDependencies": [
+        "local:pixel-icon"
+      ],
+      "files": [
+        {
+          "path": "./src/lib/components/toast.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:ui",
+      "title": "Tooltip",
+      "description": "Dark bubble on hover/focus.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/lib/components/tooltip.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "typewriter",
+      "type": "registry:ui",
+      "title": "Typewriter",
+      "description": "Char reveal with caret.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/lib/components/typewriter.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "wall-builder",
+      "type": "registry:ui",
+      "title": "Wall builder",
+      "description": "Layable brick wall with counter.",
+      "dependencies": [],
+      "registryDependencies": [
+        "local:badge",
+        "local:button",
+        "local:pixel-icon"
+      ],
+      "files": [
+        {
+          "path": "./src/lib/components/wall-builder.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bricked-css",
+      "type": "registry:lib",
+      "title": "Bricked CSS",
+      "description": "Full bk-* pixel-brick stylesheet with light/dark theme. Import it in your app.css or layout.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/lib/bricked.css",
+          "type": "registry:lib"
+        }
+      ]
+    }
+  ]
+}

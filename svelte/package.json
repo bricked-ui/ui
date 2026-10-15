@@ -1,0 +1,31 @@
+{
+  "name": "bricked-ui-svelte",
+  "version": "0.1.0",
+  "description": "Bricked UI — pixel-art brick components for Svelte 5. Same bk-* look as the React registry, Svelte-native.",
+  "type": "module",
+  "svelte": "./src/lib/index.ts",
+  "exports": {
+    ".": "./src/lib/index.ts",
+    "./bricked.css": "./src/lib/bricked.css"
+  },
+  "scripts": {
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "build": "svelte-package",
+    "gen-registry": "bun scripts/gen-registry.ts",
+    "registry:build": "bun scripts/build-registry.ts"
+  },
+  "peerDependencies": {
+    "svelte": "^5.0.0"
+  },
+  "devDependencies": {
+    "@sveltejs/package": "^2.3.0",
+    "shadcn-svelte": "latest",
+    "svelte": "^5.0.0",
+    "svelte-check": "^4.0.0",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.5.4"
+  }
+}
