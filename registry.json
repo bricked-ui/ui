@@ -1402,6 +1402,25 @@
       ]
     },
     {
+      "name": "sidebar-rail",
+      "type": "registry:ui",
+      "title": "Sidebar rail",
+      "description": "Narrow icon rail for tight layouts.",
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "pixel-icon"
+      ],
+      "files": [
+        {
+          "path": "registry/bricked-ui/sidebar-rail.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/sidebar-rail.tsx"
+        }
+      ]
+    },
+    {
       "name": "skeleton",
       "type": "registry:ui",
       "title": "Skeleton",
