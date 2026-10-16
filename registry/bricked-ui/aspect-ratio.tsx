@@ -2,7 +2,7 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
-import { PixelIcon, type PixelIconName } from "./pixel-icon";
+import { PixelIcon, type PixelIconInput } from "./pixel-icon";
 
 const aspectRatioStyles = cva("bk-cut bg-peach text-ink", {
   variants: {
@@ -13,16 +13,16 @@ const aspectRatioStyles = cva("bk-cut bg-peach text-ink", {
 });
 
 export interface AspectRatioProps extends React.ComponentProps<"div">, VariantProps<typeof aspectRatioStyles> {
-  icon?: PixelIconName;
+  icon?: PixelIconInput;
   iconPosition?: "left" | "right";
 }
 
 export function AspectRatio({ className, size, variant, icon, iconPosition = "left", children, ...props }: AspectRatioProps) {
   return (
     <div className={cn(aspectRatioStyles({ size, variant }), className)} {...props}>
-      {icon && iconPosition === "left" && <PixelIcon name={icon} />}
+      {icon && iconPosition === "left" && <PixelIcon icon={icon} />}
       {children ? <span>{children}</span> : null}
-      {icon && iconPosition === "right" && <PixelIcon name={icon} />}
+      {icon && iconPosition === "right" && <PixelIcon icon={icon} />}
     </div>
   );
 }

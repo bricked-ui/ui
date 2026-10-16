@@ -1,7 +1,7 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
-import { PixelIcon, type PixelIconName } from "./pixel-icon";
+import { PixelIcon, type PixelIconInput } from "./pixel-icon";
 
 const sidebarStyles = cva("bk-side bk-cut", {
   variants: {
@@ -21,7 +21,7 @@ const sidebarStyles = cva("bk-side bk-cut", {
 export interface SidebarProps
   extends React.ComponentProps<"aside">,
     VariantProps<typeof sidebarStyles> {
-  icon?: PixelIconName;
+  icon?: PixelIconInput;
   title?: string;
   footer?: React.ReactNode;
 }
@@ -40,7 +40,7 @@ export function Sidebar({
     <aside className={cn(sidebarStyles({ size, variant }), className)} {...props}>
       {title && (
         <div className="bk-side__head">
-          {icon && <PixelIcon name={icon} />}
+          {icon && <PixelIcon icon={icon} />}
           <span>{title}</span>
         </div>
       )}

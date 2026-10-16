@@ -1,7 +1,7 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
-import { PixelIcon, type PixelIconName } from "./pixel-icon";
+import { PixelIcon, type PixelIconInput } from "./pixel-icon";
 
 const ANSWERS = ["Lay one more brick.", "Ask again after a snack.", "Yes, build it.", "The wall says no.", "Take a break first.", "Orange is always right."];
 const s = cva("bk-answer bk-cut", {
@@ -11,8 +11,8 @@ const s = cva("bk-answer bk-cut", {
   },
   defaultVariants: { size: "md", variant: "primary" },
 });
-export interface FortuneProps extends React.ComponentProps<"div">, VariantProps<typeof s> { icon?: PixelIconName; }
+export interface FortuneProps extends React.ComponentProps<"div">, VariantProps<typeof s> { icon?: PixelIconInput; }
 export function Fortune({ className, size, variant, icon = "star", ...props }: FortuneProps) {
   const [a, setA] = React.useState("Ask me anything.");
-  return (<div className={cn(s({ size, variant }), className)} {...props}><div className="bk-answer bk-cut" aria-live="polite">{a}</div><button type="button" className="bricked-btn bricked-btn--sm" onClick={() => setA(ANSWERS[Math.floor(Math.random() * ANSWERS.length)])}><PixelIcon name={icon} />Ask</button></div>);
+  return (<div className={cn(s({ size, variant }), className)} {...props}><div className="bk-answer bk-cut" aria-live="polite">{a}</div><button type="button" className="bricked-btn bricked-btn--sm" onClick={() => setA(ANSWERS[Math.floor(Math.random() * ANSWERS.length)])}><PixelIcon icon={icon} />Ask</button></div>);
 }

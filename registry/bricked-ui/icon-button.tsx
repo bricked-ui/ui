@@ -2,7 +2,7 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
-import { PixelIcon, type PixelIconName } from "./pixel-icon";
+import { PixelIcon, type PixelIconInput } from "./pixel-icon";
 
 const iconButtonStyles = cva("bk-cut bk-bricks inline-flex items-center justify-center font-pixel text-ink cursor-pointer select-none rounded-none border-0 leading-none min-h-[calc(var(--px)*8)] px-[calc(var(--px)*7)] gap-[calc(var(--px)*2)]", {
   variants: {
@@ -13,16 +13,16 @@ const iconButtonStyles = cva("bk-cut bk-bricks inline-flex items-center justify-
 });
 
 export interface IconButtonProps extends React.ComponentProps<"button">, VariantProps<typeof iconButtonStyles> {
-  icon?: PixelIconName;
+  icon?: PixelIconInput;
   iconPosition?: "left" | "right";
 }
 
 export function IconButton({ className, size, variant, icon, iconPosition = "left", children, ...props }: IconButtonProps) {
   return (
     <button className={cn(iconButtonStyles({ size, variant }), className)} {...props}>
-      {icon && iconPosition === "left" && <PixelIcon name={icon} />}
+      {icon && iconPosition === "left" && <PixelIcon icon={icon} />}
       {children ? <span>{children}</span> : null}
-      {icon && iconPosition === "right" && <PixelIcon name={icon} />}
+      {icon && iconPosition === "right" && <PixelIcon icon={icon} />}
     </button>
   );
 }

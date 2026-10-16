@@ -2,7 +2,7 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
-import { PixelIcon, type PixelIconName } from "./pixel-icon";
+import { PixelIcon, type PixelIconInput } from "./pixel-icon";
 
 const emptyStateStyles = cva("bk-cut bg-peach text-ink", {
   variants: {
@@ -13,7 +13,7 @@ const emptyStateStyles = cva("bk-cut bg-peach text-ink", {
 });
 
 export interface EmptyStateProps extends React.ComponentProps<"div">, VariantProps<typeof emptyStateStyles> {
-  icon?: PixelIconName;
+  icon?: PixelIconInput;
   iconPosition?: "left" | "right";
   title?: string;
 }
@@ -21,9 +21,9 @@ export interface EmptyStateProps extends React.ComponentProps<"div">, VariantPro
 export function EmptyState({ className, size, variant, icon, iconPosition = "left", children, ...props }: EmptyStateProps) {
   return (
     <div className={cn(emptyStateStyles({ size, variant }), className)} {...props}>
-      {icon && iconPosition === "left" && <PixelIcon name={icon} />}
+      {icon && iconPosition === "left" && <PixelIcon icon={icon} />}
       {children ? <span>{children}</span> : null}
-      {icon && iconPosition === "right" && <PixelIcon name={icon} />}
+      {icon && iconPosition === "right" && <PixelIcon icon={icon} />}
     </div>
   );
 }

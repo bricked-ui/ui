@@ -2,7 +2,7 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
-import { PixelIcon, type PixelIconName } from "./pixel-icon";
+import { PixelIcon, type PixelIconInput } from "./pixel-icon";
 
 const tooltipStyles = cva("bk-cut bg-peach text-ink", {
   variants: {
@@ -13,7 +13,7 @@ const tooltipStyles = cva("bk-cut bg-peach text-ink", {
 });
 
 export interface TooltipProps extends React.ComponentProps<"div">, VariantProps<typeof tooltipStyles> {
-  icon?: PixelIconName;
+  icon?: PixelIconInput;
   iconPosition?: "left" | "right";
   title?: string;
 }
@@ -21,9 +21,9 @@ export interface TooltipProps extends React.ComponentProps<"div">, VariantProps<
 export function Tooltip({ className, size, variant, icon, iconPosition = "left", children, ...props }: TooltipProps) {
   return (
     <div className={cn(tooltipStyles({ size, variant }), className)} {...props}>
-      {icon && iconPosition === "left" && <PixelIcon name={icon} />}
+      {icon && iconPosition === "left" && <PixelIcon icon={icon} />}
       {children ? <span>{children}</span> : null}
-      {icon && iconPosition === "right" && <PixelIcon name={icon} />}
+      {icon && iconPosition === "right" && <PixelIcon icon={icon} />}
     </div>
   );
 }

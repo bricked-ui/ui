@@ -2,7 +2,7 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
-import { PixelIcon, type PixelIconName } from "./pixel-icon";
+import { PixelIcon, type PixelIconInput } from "./pixel-icon";
 
 const spinnerStyles = cva("bk-cut bg-ink text-on-dark", {
   variants: {
@@ -13,16 +13,16 @@ const spinnerStyles = cva("bk-cut bg-ink text-on-dark", {
 });
 
 export interface SpinnerProps extends React.ComponentProps<"div">, VariantProps<typeof spinnerStyles> {
-  icon?: PixelIconName;
+  icon?: PixelIconInput;
   iconPosition?: "left" | "right";
 }
 
 export function Spinner({ className, size, variant, icon, iconPosition = "left", children, ...props }: SpinnerProps) {
   return (
     <div className={cn(spinnerStyles({ size, variant }), className)} {...props}>
-      {icon && iconPosition === "left" && <PixelIcon name={icon} />}
+      {icon && iconPosition === "left" && <PixelIcon icon={icon} />}
       {children ? <span>{children}</span> : null}
-      {icon && iconPosition === "right" && <PixelIcon name={icon} />}
+      {icon && iconPosition === "right" && <PixelIcon icon={icon} />}
     </div>
   );
 }

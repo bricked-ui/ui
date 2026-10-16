@@ -2,7 +2,7 @@
   import PixelIcon from "./pixel-icon.svelte";
 
   interface Props {
-    icon?: import("./icons.js").PixelIconName;
+    icon?: import("./icons.js").PixelIconInput;
     dark?: boolean;
     children?: import("svelte").Snippet;
   }
@@ -10,7 +10,7 @@
 </script>
 
 <span class="bk-avatar bk-cut" class:bk-avatar--dark={dark}>
-  {#if icon}<PixelIcon name={icon} />
+  {#if icon}<PixelIcon icon={icon} />
   {:else if children}{@render children()}
   {/if}
 </span>

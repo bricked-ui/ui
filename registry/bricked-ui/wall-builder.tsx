@@ -1,7 +1,7 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
-import { PixelIcon, type PixelIconName } from "./pixel-icon";
+import { PixelIcon, type PixelIconInput } from "./pixel-icon";
 
 const s = cva("bk-wall", {
   variants: {
@@ -10,7 +10,7 @@ const s = cva("bk-wall", {
   },
   defaultVariants: { size: "md", variant: "primary" },
 });
-export interface WallBuilderProps extends React.ComponentProps<"div">, VariantProps<typeof s> { icon?: PixelIconName; rows?: number; cols?: number; }
+export interface WallBuilderProps extends React.ComponentProps<"div">, VariantProps<typeof s> { icon?: PixelIconInput; rows?: number; cols?: number; }
 export function WallBuilder({ className, size, variant, rows = 4, cols = 6, ...props }: WallBuilderProps) {
   const [n, setN] = React.useState(0);
   const total = rows * cols;

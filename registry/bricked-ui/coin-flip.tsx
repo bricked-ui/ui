@@ -1,7 +1,7 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
-import { PixelIcon, type PixelIconName } from "./pixel-icon";
+import { PixelIcon, type PixelIconInput } from "./pixel-icon";
 
 const s = cva("bk-die bk-cut grid place-items-center", {
   variants: {
@@ -10,8 +10,8 @@ const s = cva("bk-die bk-cut grid place-items-center", {
   },
   defaultVariants: { size: "md", variant: "primary" },
 });
-export interface CoinFlipProps extends React.ComponentProps<"button">, VariantProps<typeof s> { icon?: PixelIconName; }
+export interface CoinFlipProps extends React.ComponentProps<"button">, VariantProps<typeof s> { icon?: PixelIconInput; }
 export function CoinFlip({ className, size, variant, icon = "star", ...props }: CoinFlipProps) {
   const [side, setSide] = React.useState(0);
-  return (<button type="button" className={cn(s({ size, variant }), className)} onClick={() => setSide(Math.floor(Math.random() * 2))} {...props}><PixelIcon name={side === 0 ? icon : "dot"} /></button>);
+  return (<button type="button" className={cn(s({ size, variant }), className)} onClick={() => setSide(Math.floor(Math.random() * 2))} {...props}><PixelIcon icon={side === 0 ? icon : "dot"} /></button>);
 }

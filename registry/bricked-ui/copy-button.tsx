@@ -1,7 +1,7 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
-import { PixelIcon, type PixelIconName } from "./pixel-icon";
+import { PixelIcon, type PixelIconInput } from "./pixel-icon";
 
 const s = cva("bk-cut bk-bricks inline-flex items-center gap-2 font-pixel", {
   variants: {
@@ -10,8 +10,8 @@ const s = cva("bk-cut bk-bricks inline-flex items-center gap-2 font-pixel", {
   },
   defaultVariants: { size: "md", variant: "primary" },
 });
-export interface CopyButtonProps extends Omit<React.ComponentProps<"button">, "onCopy">, VariantProps<typeof s> { text: string; icon?: PixelIconName; }
+export interface CopyButtonProps extends Omit<React.ComponentProps<"button">, "onCopy">, VariantProps<typeof s> { text: string; icon?: PixelIconInput; }
 export function CopyButton({ className, size, variant, text, icon = "plus", ...props }: CopyButtonProps) {
   const [done, setDone] = React.useState(false);
-  return (<button type="button" className={cn(s({ size, variant }), className)} onClick={async () => { try { await navigator.clipboard.writeText(text); } catch {} setDone(true); setTimeout(() => setDone(false), 1500); }} {...props}><PixelIcon name={done ? "check" : icon} />{done ? "Copied" : "Copy"}</button>);
+  return (<button type="button" className={cn(s({ size, variant }), className)} onClick={async () => { try { await navigator.clipboard.writeText(text); } catch {} setDone(true); setTimeout(() => setDone(false), 1500); }} {...props}><PixelIcon icon={done ? "check" : icon} />{done ? "Copied" : "Copy"}</button>);
 }

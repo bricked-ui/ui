@@ -1,7 +1,7 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
-import { PixelIcon, type PixelIconName } from "./pixel-icon";
+import { PixelIcon, type PixelIconInput } from "./pixel-icon";
 
 const s = cva("bk-sky bk-cut", {
   variants: {
@@ -10,8 +10,8 @@ const s = cva("bk-sky bk-cut", {
   },
   defaultVariants: { size: "md", variant: "primary" },
 });
-export interface LaunchPadProps extends React.ComponentProps<"div">, VariantProps<typeof s> { icon?: PixelIconName; }
+export interface LaunchPadProps extends React.ComponentProps<"div">, VariantProps<typeof s> { icon?: PixelIconInput; }
 export function LaunchPad({ className, size, variant, icon = "rocket", ...props }: LaunchPadProps) {
   const [fly, setFly] = React.useState(false);
-  return (<div className={cn(s({ size, variant }), className)} {...props}><div className="bk-sky bk-cut" aria-hidden="true"><span className={fly ? "bk-rocket is-fly" : "bk-rocket"}><PixelIcon name={icon} /></span></div><button type="button" className="bricked-btn bricked-btn--sm" disabled={fly} onClick={() => { setFly(true); setTimeout(() => setFly(false), 1500); }}>Launch</button></div>);
+  return (<div className={cn(s({ size, variant }), className)} {...props}><div className="bk-sky bk-cut" aria-hidden="true"><span className={fly ? "bk-rocket is-fly" : "bk-rocket"}><PixelIcon icon={icon} /></span></div><button type="button" className="bricked-btn bricked-btn--sm" disabled={fly} onClick={() => { setFly(true); setTimeout(() => setFly(false), 1500); }}>Launch</button></div>);
 }

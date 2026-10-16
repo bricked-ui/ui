@@ -1,7 +1,7 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
-import { PixelIcon, type PixelIconName } from "./pixel-icon";
+import { PixelIcon, type PixelIconInput } from "./pixel-icon";
 
 const s = cva("bk-clock bk-cut", {
   variants: {
@@ -10,7 +10,7 @@ const s = cva("bk-clock bk-cut", {
   },
   defaultVariants: { size: "md", variant: "primary" },
 });
-export interface CountdownProps extends React.ComponentProps<"div">, VariantProps<typeof s> { seconds: number; icon?: PixelIconName; }
+export interface CountdownProps extends React.ComponentProps<"div">, VariantProps<typeof s> { seconds: number; icon?: PixelIconInput; }
 export function Countdown({ className, size, variant, seconds, ...props }: CountdownProps) {
   const [s2, setS] = React.useState(seconds);
   React.useEffect(() => { setS(seconds); const i = setInterval(() => setS(v => Math.max(0, v - 1)), 1000); return () => clearInterval(i); }, [seconds]);

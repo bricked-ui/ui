@@ -1,7 +1,7 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
-import { PixelIcon, type PixelIconName } from "./pixel-icon";
+import { PixelIcon, type PixelIconInput } from "./pixel-icon";
 
 const button = cva(
   "bk-cut bk-bricks inline-flex items-center justify-center font-pixel text-ink " +
@@ -28,7 +28,7 @@ const button = cva(
 export interface BrickedButtonProps
   extends React.ComponentProps<"button">,
     VariantProps<typeof button> {
-  icon?: PixelIconName;
+  icon?: PixelIconInput;
   iconPosition?: "left" | "right";
 }
 
@@ -42,9 +42,9 @@ export function BrickedButton({
 }: BrickedButtonProps) {
   return (
     <button className={cn(button({ size }), className)} {...props}>
-      {icon && iconPosition === "left" && <PixelIcon name={icon} />}
+      {icon && iconPosition === "left" && <PixelIcon icon={icon} />}
       <span>{children}</span>
-      {icon && iconPosition === "right" && <PixelIcon name={icon} />}
+      {icon && iconPosition === "right" && <PixelIcon icon={icon} />}
     </button>
   );
 }

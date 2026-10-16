@@ -2,7 +2,7 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
-import { PixelIcon, type PixelIconName } from "./pixel-icon";
+import { PixelIcon, type PixelIconInput } from "./pixel-icon";
 
 const chipsStyles = cva("bk-cut bg-field text-ink", {
   variants: {
@@ -13,16 +13,16 @@ const chipsStyles = cva("bk-cut bg-field text-ink", {
 });
 
 export interface ChipsProps extends React.ComponentProps<"div">, VariantProps<typeof chipsStyles> {
-  icon?: PixelIconName;
+  icon?: PixelIconInput;
   iconPosition?: "left" | "right";
 }
 
 export function Chips({ className, size, variant, icon, iconPosition = "left", children, ...props }: ChipsProps) {
   return (
     <div className={cn(chipsStyles({ size, variant }), className)} {...props}>
-      {icon && iconPosition === "left" && <PixelIcon name={icon} />}
+      {icon && iconPosition === "left" && <PixelIcon icon={icon} />}
       {children ? <span>{children}</span> : null}
-      {icon && iconPosition === "right" && <PixelIcon name={icon} />}
+      {icon && iconPosition === "right" && <PixelIcon icon={icon} />}
     </div>
   );
 }

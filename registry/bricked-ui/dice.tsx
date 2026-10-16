@@ -1,7 +1,7 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
-import { PixelIcon, type PixelIconName } from "./pixel-icon";
+import { PixelIcon, type PixelIconInput } from "./pixel-icon";
 
 const PIPS: Record<number, number[]> = { 1: [4], 2: [0,8], 3: [0,4,8], 4: [0,2,6,8], 5: [0,2,4,6,8], 6: [0,2,3,5,6,8] };
 const s = cva("bk-die bk-cut", {
@@ -11,7 +11,7 @@ const s = cva("bk-die bk-cut", {
   },
   defaultVariants: { size: "md", variant: "primary" },
 });
-export interface DiceProps extends React.ComponentProps<"div">, VariantProps<typeof s> { icon?: PixelIconName; }
+export interface DiceProps extends React.ComponentProps<"div">, VariantProps<typeof s> { icon?: PixelIconInput; }
 export function Dice({ className, size, variant, ...props }: DiceProps) {
   const [face, setFace] = React.useState(5);
   const [rolling, setRolling] = React.useState(false);

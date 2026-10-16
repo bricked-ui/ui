@@ -2,7 +2,7 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
-import { PixelIcon, type PixelIconName } from "./pixel-icon";
+import { PixelIcon, type PixelIconInput } from "./pixel-icon";
 
 const modalStyles = cva("bk-cut bg-peach text-ink", {
   variants: {
@@ -13,7 +13,7 @@ const modalStyles = cva("bk-cut bg-peach text-ink", {
 });
 
 export interface ModalProps extends React.ComponentProps<"div">, VariantProps<typeof modalStyles> {
-  icon?: PixelIconName;
+  icon?: PixelIconInput;
   iconPosition?: "left" | "right";
   title?: string;
 }
@@ -21,9 +21,9 @@ export interface ModalProps extends React.ComponentProps<"div">, VariantProps<ty
 export function Modal({ className, size, variant, icon, iconPosition = "left", children, ...props }: ModalProps) {
   return (
     <div className={cn(modalStyles({ size, variant }), className)} {...props}>
-      {icon && iconPosition === "left" && <PixelIcon name={icon} />}
+      {icon && iconPosition === "left" && <PixelIcon icon={icon} />}
       {children ? <span>{children}</span> : null}
-      {icon && iconPosition === "right" && <PixelIcon name={icon} />}
+      {icon && iconPosition === "right" && <PixelIcon icon={icon} />}
     </div>
   );
 }

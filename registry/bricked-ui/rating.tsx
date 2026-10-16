@@ -1,7 +1,7 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
-import { PixelIcon, type PixelIconName } from "./pixel-icon";
+import { PixelIcon, type PixelIconInput } from "./pixel-icon";
 
 const s = cva("bk-rate", {
   variants: {
@@ -10,7 +10,7 @@ const s = cva("bk-rate", {
   },
   defaultVariants: { size: "md", variant: "primary" },
 });
-export interface RatingProps extends Omit<React.ComponentProps<"div">, "onChange">, VariantProps<typeof s> { value: number; onChange: (v: number) => void; icon?: PixelIconName; }
+export interface RatingProps extends Omit<React.ComponentProps<"div">, "onChange">, VariantProps<typeof s> { value: number; onChange: (v: number) => void; icon?: PixelIconInput; }
 export function Rating({ className, size, variant, value, onChange, icon = "star", ...props }: RatingProps) {
-  return (<div className={cn(s({ size, variant }), className)} role="radiogroup" aria-label="Rating" {...props}>{[1,2,3,4,5].map(n => (<button key={n} type="button" role="radio" aria-checked={value === n} aria-label={n + " stars"} className={n <= value ? "is-on" : ""} onClick={() => onChange(n)}><PixelIcon name={icon} /></button>))}</div>);
+  return (<div className={cn(s({ size, variant }), className)} role="radiogroup" aria-label="Rating" {...props}>{[1,2,3,4,5].map(n => (<button key={n} type="button" role="radio" aria-checked={value === n} aria-label={n + " stars"} className={n <= value ? "is-on" : ""} onClick={() => onChange(n)}><PixelIcon icon={icon} /></button>))}</div>);
 }

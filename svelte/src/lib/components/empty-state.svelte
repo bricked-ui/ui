@@ -1,11 +1,11 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
   import PixelIcon from "./pixel-icon.svelte";
-  import type { PixelIconName } from "./icons.js";
+  import type { PixelIconInput } from "./icons.js";
   import { cn } from "$lib/utils.js";
 
   interface Props {
-    icon: PixelIconName;
+    icon: PixelIconInput;
     title: string;
     action?: Snippet;
     class?: string;
@@ -15,7 +15,7 @@
 </script>
 
 <div class={cn("bk-empty bk-cut", cls)} {...rest}>
-  <PixelIcon name={icon} />
+  <PixelIcon icon={icon} />
   <p class="bk-empty__title">{title}</p>
   <p>{@render children()}</p>
   {#if action}

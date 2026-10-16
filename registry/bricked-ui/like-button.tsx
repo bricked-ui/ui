@@ -1,7 +1,7 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
-import { PixelIcon, type PixelIconName } from "./pixel-icon";
+import { PixelIcon, type PixelIconInput } from "./pixel-icon";
 
 const s = cva("bk-like", {
   variants: {
@@ -10,9 +10,9 @@ const s = cva("bk-like", {
   },
   defaultVariants: { size: "md", variant: "primary" },
 });
-export interface LikeButtonProps extends React.ComponentProps<"button">, VariantProps<typeof s> { icon?: PixelIconName; count?: number; }
+export interface LikeButtonProps extends React.ComponentProps<"button">, VariantProps<typeof s> { icon?: PixelIconInput; count?: number; }
 export function LikeButton({ className, size, variant, icon = "heart", count = 12, ...props }: LikeButtonProps) {
   const [on, setOn] = React.useState(false);
   const [n, setN] = React.useState(count);
-  return (<button type="button" aria-pressed={on} className={cn(s({ size, variant }), on && "is-on", className)} onClick={() => { setOn(!on); setN(n + (on ? -1 : 1)); }} {...props}><PixelIcon name={icon} />{n}{on && <span className="bk-burst" aria-hidden="true">{[0,1,2,3].map(i => <span key={i} />)}</span>}</button>);
+  return (<button type="button" aria-pressed={on} className={cn(s({ size, variant }), on && "is-on", className)} onClick={() => { setOn(!on); setN(n + (on ? -1 : 1)); }} {...props}><PixelIcon icon={icon} />{n}{on && <span className="bk-burst" aria-hidden="true">{[0,1,2,3].map(i => <span key={i} />)}</span>}</button>);
 }

@@ -1,7 +1,7 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
-import { PixelIcon, type PixelIconName } from "./pixel-icon";
+import { PixelIcon, type PixelIconInput } from "./pixel-icon";
 
 const s = cva("bk-clock bk-cut", {
   variants: {
@@ -10,7 +10,7 @@ const s = cva("bk-clock bk-cut", {
   },
   defaultVariants: { size: "md", variant: "primary" },
 });
-export interface ClockProps extends React.ComponentProps<"div">, VariantProps<typeof s> { icon?: PixelIconName; }
+export interface ClockProps extends React.ComponentProps<"div">, VariantProps<typeof s> { icon?: PixelIconInput; }
 export function Clock({ className, size, variant, ...props }: ClockProps) {
   const [t, setT] = React.useState(() => new Date());
   React.useEffect(() => { const i = setInterval(() => setT(new Date()), 1000); return () => clearInterval(i); }, []);

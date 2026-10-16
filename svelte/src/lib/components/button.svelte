@@ -1,12 +1,12 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
   import PixelIcon from "./pixel-icon.svelte";
-  import type { PixelIconName } from "./icons.js";
+  import type { PixelIconInput } from "./icons.js";
   import { cn } from "$lib/utils.js";
 
   interface Props {
     size?: "sm" | "md" | "lg";
-    icon?: PixelIconName;
+    icon?: PixelIconInput;
     iconPosition?: "left" | "right";
     type?: "button" | "submit" | "reset";
     disabled?: boolean;
@@ -37,10 +37,10 @@
   {...rest}
 >
   {#if icon && iconPosition === "left"}
-    <PixelIcon name={icon} />
+    <PixelIcon icon={icon} />
   {/if}
   <span>{@render children()}</span>
   {#if icon && iconPosition === "right"}
-    <PixelIcon name={icon} />
+    <PixelIcon icon={icon} />
   {/if}
 </button>

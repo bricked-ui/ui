@@ -1,7 +1,7 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
-import { PixelIcon, type PixelIconName } from "./pixel-icon";
+import { PixelIcon, type PixelIconInput } from "./pixel-icon";
 
 const s = cva("bk-type", {
   variants: {
@@ -10,7 +10,7 @@ const s = cva("bk-type", {
   },
   defaultVariants: { size: "md", variant: "primary" },
 });
-export interface TypewriterProps extends Omit<React.ComponentProps<"p">, "children">, VariantProps<typeof s> { text: string; icon?: PixelIconName; }
+export interface TypewriterProps extends Omit<React.ComponentProps<"p">, "children">, VariantProps<typeof s> { text: string; icon?: PixelIconInput; }
 export function Typewriter({ className, size, variant, text, ...props }: TypewriterProps) {
   const [n, setN] = React.useState(0);
   React.useEffect(() => { const t = setInterval(() => setN(v => { if (v >= text.length) { clearInterval(t); return v; } return v + 1; }), 60); return () => clearInterval(t); }, [text]);

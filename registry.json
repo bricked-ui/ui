@@ -7,7 +7,7 @@
       "name": "pixel-icon",
       "type": "registry:ui",
       "title": "Pixel Icon",
-      "description": "20 crisp 7x7 pixel icons as SVG rects. Every component takes one via the icon prop.",
+      "description": "268 pixel icons as SVG rects (7x7 grids, GitHub and Discord at 16x16). Every component takes one via the icon prop — or pass your own grid.",
       "files": [
         {
           "path": "registry/bricked-ui/pixel-icon.tsx",

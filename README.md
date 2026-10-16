@@ -58,7 +58,7 @@ bunx shadcn add https://bricked-ui.vercel.app/r/button.json
 
 1. Drop `my-thing.tsx` into `registry/bricked-ui/`, following the house
    pattern: `cva` variants (`size: sm/md/lg`, `variant: primary/dark`),
-   an `icon` prop (any `PixelIconName`), `className` merged with `cn()`.
+   an `icon` prop (any `PixelIconInput` — registry name or custom grid), `className` merged with `cn()`.
 2. Register it in `registry.json` (`name`, `type`, `title`, `description`,
    `files` with paths relative to `ui/`, plus `dependencies` /
    `registryDependencies` as needed). Related files ship as one item -
@@ -79,7 +79,10 @@ website repo, so the site serves exactly what was validated here.
 - No border-radius, no borders, no blur - depth comes from hard inset bevels.
 - Corners are cut staircases (`bk-cut`); motion is `steps()` only.
 - Text on orange is always ink (`#2b1100`), never white.
-- Icons are 7x7 crisp grids (`pixel-icon.tsx`; `github` is the one 16x16
-  exception). New glyphs must follow the same rules.
+- Icons are 7x7 crisp grids (`pixel-icon.tsx`; `github` and `discord` are
+  16x16 exceptions) — 268 glyphs in the registry, including brand marks
+  (`youtube`, `discord`, `x`, `instagram`, `spotify`, …). `PixelIcon` also renders
+  caller-supplied `PixelIconGrid` rows (`grid` prop), and every `icon` prop
+  takes `PixelIconInput` (name or grid). New glyphs must follow the same rules.
 - See `DESIGN.md` for the complete spec: tokens, pixel units, motion,
   per-component recipes and the new-component checklist.

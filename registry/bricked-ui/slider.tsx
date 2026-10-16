@@ -1,7 +1,7 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
-import { PixelIcon, type PixelIconName } from "./pixel-icon";
+import { PixelIcon, type PixelIconInput } from "./pixel-icon";
 
 const s = cva("bk-slider bk-cut", {
   variants: {
@@ -10,7 +10,7 @@ const s = cva("bk-slider bk-cut", {
   },
   defaultVariants: { size: "md", variant: "primary" },
 });
-export interface BrickedSliderProps extends Omit<React.ComponentProps<"input">, "onChange" | "size">, VariantProps<typeof s> { value: number; onChange: (v: number) => void; icon?: PixelIconName; }
+export interface BrickedSliderProps extends Omit<React.ComponentProps<"input">, "onChange" | "size">, VariantProps<typeof s> { value: number; onChange: (v: number) => void; icon?: PixelIconInput; }
 export function BrickedSlider({ className, size, variant, value, onChange, ...props }: BrickedSliderProps) {
   return (<input type="range" min={0} max={100} value={value} className={cn(s({ size, variant }), className)} style={{ "--v": value + "%" } as React.CSSProperties} onChange={e => onChange(Number(e.target.value))} {...props} />);
 }

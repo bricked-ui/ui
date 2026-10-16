@@ -159,7 +159,7 @@ Bevel width: 3px (small items), 4px (most), 6px (card/modal).
 
 ### 3.4 Pixel icons
 
-All icons are **7×7 grids** rendered as SVG `<rect>`s with `shape-rendering="crispEdges"`, filled `currentColor`. Rendered size = `7 × --icon`. In a button, icon color is `ink`.
+All icons are **7×7 grids** rendered as SVG `<rect>`s with `shape-rendering="crispEdges"`, filled `currentColor`. Rendered size = `7 × --icon`. In a button, icon color is `ink`. The registry ships 268 glyphs (plus `github` and `discord` at 16×16); `PixelIcon` additionally renders caller-supplied `PixelIconGrid` rows of any size, and every `icon` prop accepts `PixelIconInput` (name or grid).
 
 ```js
 const ICONS = {
@@ -346,7 +346,7 @@ const ICONS = {
 };
 ```
 
-New icons must follow the same rules: 7×7, 1-pixel-thick strokes, symmetrical where natural, no anti-aliasing.
+New icons must follow the same rules: 7×7, 1-pixel-thick strokes, symmetrical where natural, no anti-aliasing. Custom grids are rows of `0`/`1` (equal length recommended, any size); unknown names resolve to nothing.
 
 ---
 

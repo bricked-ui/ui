@@ -2,7 +2,7 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
-import { PixelIcon, type PixelIconName } from "./pixel-icon";
+import { PixelIcon, type PixelIconInput } from "./pixel-icon";
 
 const stepperStyles = cva("bk-cut bg-peach text-ink", {
   variants: {
@@ -13,16 +13,16 @@ const stepperStyles = cva("bk-cut bg-peach text-ink", {
 });
 
 export interface StepperProps extends React.ComponentProps<"div">, VariantProps<typeof stepperStyles> {
-  icon?: PixelIconName;
+  icon?: PixelIconInput;
   iconPosition?: "left" | "right";
 }
 
 export function Stepper({ className, size, variant, icon, iconPosition = "left", children, ...props }: StepperProps) {
   return (
     <div className={cn(stepperStyles({ size, variant }), className)} {...props}>
-      {icon && iconPosition === "left" && <PixelIcon name={icon} />}
+      {icon && iconPosition === "left" && <PixelIcon icon={icon} />}
       {children ? <span>{children}</span> : null}
-      {icon && iconPosition === "right" && <PixelIcon name={icon} />}
+      {icon && iconPosition === "right" && <PixelIcon icon={icon} />}
     </div>
   );
 }
