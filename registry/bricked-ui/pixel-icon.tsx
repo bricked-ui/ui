@@ -344,7 +344,7 @@ export type PixelIconName = keyof typeof ICONS;
 
 /**
  * A custom pixel grid: one string per row, `"1"` = filled pixel.
- * Any size works (built-ins are 7x7, github is 16x16). Keep rows the same
+ * Any size works (7x7 glyphs, brand marks at 16x16). Keep rows the same
  * length — ragged rows render left-aligned against the widest row.
  */
 export type PixelIconGrid = readonly string[];

@@ -79,8 +79,8 @@ website repo, so the site serves exactly what was validated here.
 - No border-radius, no borders, no blur - depth comes from hard inset bevels.
 - Corners are cut staircases (`bk-cut`); motion is `steps()` only.
 - Text on orange is always ink (`#2b1100`), never white.
-- Icons are 7x7 crisp grids (`pixel-icon.tsx`; `github` and `discord` are
-  16x16 exceptions) — 268 glyphs in the registry, including brand marks
+- Icons are 7x7 crisp grids (`pixel-icon.tsx`; brand marks are the 16x16
+  exceptions) — 268 glyphs in the registry, including brand marks
   (`youtube`, `discord`, `x`, `instagram`, `spotify`, …). `PixelIcon` also renders
   caller-supplied `PixelIconGrid` rows (`grid` prop), and every `icon` prop
   takes `PixelIconInput` (name or grid). New glyphs must follow the same rules.
