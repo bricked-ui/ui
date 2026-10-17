@@ -33,6 +33,10 @@ bunx shadcn registry add @bricked=https://bricked-ui.vercel.app/r/{name}.json  #
 bunx shadcn add @bricked/button
 ```
 
+Every component lists `bricked-css` in `registryDependencies`, so the
+`bk-*` stylesheet lands on the first `add` — only `bricked-globals` (the
+Tailwind v4 theme) is a separate step. Then import both in your CSS entry.
+
 Svelte:
 
 ```sh
@@ -61,7 +65,8 @@ bunx shadcn add https://bricked-ui.vercel.app/r/button.json
    an `icon` prop (any `PixelIconInput` — registry name or custom grid), `className` merged with `cn()`.
 2. Register it in `registry.json` (`name`, `type`, `title`, `description`,
    `files` with paths relative to `ui/`, plus `dependencies` /
-   `registryDependencies` as needed). Related files ship as one item -
+   `registryDependencies` as needed — every component keeps `bricked-css`
+   there so the stylesheet ships with it). Related files ship as one item -
    presets are usage examples, not items.
 3. Validate and publish the JSON:
 

@@ -2,6 +2,7 @@
 // - React ui/registry.json (titles/descriptions/grouping = single source of truth)
 // - files actually present in ui/svelte/src/lib/components (kebab-case)
 // - real cross-imports scanned from file contents (registryDependencies)
+// - local:bricked-css added to every component (base stylesheet ships along)
 // Run: bun scripts/gen-registry.ts  (cwd = ui/svelte)
 import { readFileSync, writeFileSync, existsSync, readdirSync } from "node:fs";
 import { resolve, dirname } from "node:path";
@@ -58,7 +59,7 @@ for (const it of react.items as ReactItem[]) {
   // pixel-icon also ships its icons grid (same install dir, ./icons.js works)
   if (it.name === "pixel-icon") files.push("icons.ts");
 
-  const regdeps = new Set<string>();
+  const regdeps = new Set<string>(["local:bricked-css"]);
   for (const f of files) {
     if (f === "icons.ts") continue;
     const src = readFileSync(resolve(COMP, f), "utf8");

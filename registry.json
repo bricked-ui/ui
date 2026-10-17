@@ -14,6 +14,9 @@
           "type": "registry:ui",
           "target": "components/ui/pixel-icon.tsx"
         }
+      ],
+      "registryDependencies": [
+        "bricked-css"
       ]
     },
     {
@@ -25,6 +28,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -44,6 +48,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -63,6 +68,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -87,6 +93,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -106,6 +113,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -125,6 +133,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -144,6 +153,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -163,6 +173,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -182,6 +193,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -201,6 +213,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -220,6 +233,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -244,6 +258,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -261,6 +276,7 @@
       "description": "Month grid with selected day.",
       "dependencies": [],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -280,6 +296,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -299,6 +316,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -318,6 +336,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -337,6 +356,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -356,6 +376,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -373,6 +394,7 @@
       "description": "Live 24h dark clock.",
       "dependencies": [],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -392,6 +414,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -409,6 +432,7 @@
       "description": "Orange/ink flip square.",
       "dependencies": [],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -428,6 +452,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -447,6 +472,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -466,6 +492,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -483,6 +510,7 @@
       "description": "Filterable search plus list dialog.",
       "dependencies": [],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -502,6 +530,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -519,6 +548,7 @@
       "description": "Copies text, flips to a check on success.",
       "dependencies": [],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -536,6 +566,7 @@
       "description": "Ticking d/h/m/s boxes.",
       "dependencies": [],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -553,6 +584,7 @@
       "description": "Minus/plus stepper around a value box.",
       "dependencies": [],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -572,6 +604,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -589,6 +622,7 @@
       "description": "Input opening a calendar.",
       "dependencies": [],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -608,6 +642,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -625,6 +660,7 @@
       "description": "Rollable 72px die.",
       "dependencies": [],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -644,6 +680,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -663,6 +700,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -682,6 +720,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -701,6 +740,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -720,6 +760,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -744,6 +785,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -763,6 +805,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -790,6 +833,7 @@
       "description": "Random answer box.",
       "dependencies": [],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -809,6 +853,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -828,6 +873,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -847,6 +893,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -876,6 +923,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -895,6 +943,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -914,6 +963,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -931,6 +981,7 @@
       "description": "Sky box with flying rocket.",
       "dependencies": [],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -950,6 +1001,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -967,6 +1019,7 @@
       "description": "Field-surface like with heart burst and count.",
       "dependencies": [],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -986,6 +1039,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1005,6 +1059,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1024,6 +1079,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1043,6 +1099,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1062,6 +1119,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1081,6 +1139,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1100,6 +1159,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1117,6 +1177,7 @@
       "description": "Segmented code boxes.",
       "dependencies": [],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1136,6 +1197,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1155,6 +1217,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1174,6 +1237,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1198,6 +1262,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1217,6 +1282,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1236,6 +1302,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1253,6 +1320,7 @@
       "description": "Five star radio buttons.",
       "dependencies": [],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1272,6 +1340,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1291,6 +1360,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1310,6 +1380,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1329,6 +1400,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1353,6 +1425,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1372,6 +1445,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1391,6 +1465,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1410,6 +1485,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1429,6 +1505,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1446,6 +1523,7 @@
       "description": "Range with orange fill and ink thumb.",
       "dependencies": [],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1465,6 +1543,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1484,6 +1563,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1503,6 +1583,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1522,6 +1603,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1541,6 +1623,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1565,6 +1648,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1584,6 +1668,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1603,6 +1688,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1622,6 +1708,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1641,6 +1728,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1660,6 +1748,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1679,6 +1768,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1696,6 +1786,7 @@
       "description": "Char reveal with caret.",
       "dependencies": [],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1715,6 +1806,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1732,6 +1824,7 @@
       "description": "Layable brick wall with counter.",
       "dependencies": [],
       "registryDependencies": [
+        "bricked-css",
         "pixel-icon"
       ],
       "files": [
@@ -1746,7 +1839,7 @@
       "name": "bricked-css",
       "type": "registry:lib",
       "title": "Bricked CSS",
-      "description": "Full bk-* stylesheet. Import alongside globals.",
+      "description": "Full bk-* stylesheet. Installs automatically as a dependency of every component - import it once in your CSS entry.",
       "files": [
         {
           "path": "registry/bricked-ui/bricked.css",

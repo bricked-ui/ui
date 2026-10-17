@@ -8,8 +8,11 @@ the React registry in `ui/`. Same `bk-*` look, 50 registry items.
 ```sh
 bun x shadcn-svelte@latest init   # once: creates $lib/utils (cn) + aliases
 bun x shadcn-svelte@latest add https://bricked-ui.vercel.app/r-svelte/button.json
-bun x shadcn-svelte@latest add https://bricked-ui.vercel.app/r-svelte/bricked-css.json
 ```
+
+Every component declares `bricked-css` as a registry dependency, so
+`$lib/bricked.css` installs along with the first component you add — no
+separate stylesheet step.
 
 ```svelte
 <script>
@@ -80,7 +83,8 @@ svelte/
 `registry.json` titles/descriptions/grouping come from `ui/registry.json`
 (single source of truth — React names). `local:<name>` deps become
 `./<name>.json` in the built output; `$lib/utils` imports become the
-`$UTILS$` placeholder, exactly like the official registry.
+`$UTILS$` placeholder, exactly like the official registry. Every component
+carries `local:bricked-css`, so the stylesheet is never a manual step.
 
 ```sh
 bun install

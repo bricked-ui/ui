@@ -7,9 +7,11 @@
       "name": "pixel-icon",
       "type": "registry:ui",
       "title": "Pixel Icon",
-      "description": "268 pixel icons as SVG rects (7x7 grids, GitHub and Discord at 16x16). Every component takes one via the icon prop — or pass your own grid.",
+      "description": "268 pixel icons as SVG rects (7x7 grids, brand marks at 16x16). Every component takes one via the icon prop — or pass your own grid.",
       "dependencies": [],
-      "registryDependencies": [],
+      "registryDependencies": [
+        "local:bricked-css"
+      ],
       "files": [
         {
           "path": "./src/lib/components/pixel-icon.svelte",
@@ -28,6 +30,7 @@
       "description": "Field headers, orange when open.",
       "dependencies": [],
       "registryDependencies": [
+        "local:bricked-css",
         "local:pixel-icon"
       ],
       "files": [
@@ -44,6 +47,7 @@
       "description": "Dark alert with title and body.",
       "dependencies": [],
       "registryDependencies": [
+        "local:bricked-css",
         "local:pixel-icon"
       ],
       "files": [
@@ -60,6 +64,7 @@
       "description": "Orange or dark 48px avatar.",
       "dependencies": [],
       "registryDependencies": [
+        "local:bricked-css",
         "local:pixel-icon"
       ],
       "files": [
@@ -75,7 +80,9 @@
       "title": "Badge",
       "description": "Orange or dark pixel badge.",
       "dependencies": [],
-      "registryDependencies": [],
+      "registryDependencies": [
+        "local:bricked-css"
+      ],
       "files": [
         {
           "path": "./src/lib/components/badge.svelte",
@@ -90,6 +97,7 @@
       "description": "Orange announcement bar.",
       "dependencies": [],
       "registryDependencies": [
+        "local:bricked-css",
         "local:pixel-icon"
       ],
       "files": [
@@ -106,6 +114,7 @@
       "description": "Links with separators, current page tag.",
       "dependencies": [],
       "registryDependencies": [
+        "local:bricked-css",
         "local:pixel-icon"
       ],
       "files": [
@@ -122,6 +131,7 @@
       "description": "Brick button + square icon-button variant. sm/md/lg, primary/dark, left/right icon slots.",
       "dependencies": [],
       "registryDependencies": [
+        "local:bricked-css",
         "local:pixel-icon"
       ],
       "files": [
@@ -141,7 +151,9 @@
       "title": "Calendar",
       "description": "Month grid with selected day.",
       "dependencies": [],
-      "registryDependencies": [],
+      "registryDependencies": [
+        "local:bricked-css"
+      ],
       "files": [
         {
           "path": "./src/lib/components/calendar.svelte",
@@ -155,7 +167,9 @@
       "title": "Card",
       "description": "Peach card with brick header and body.",
       "dependencies": [],
-      "registryDependencies": [],
+      "registryDependencies": [
+        "local:bricked-css"
+      ],
       "files": [
         {
           "path": "./src/lib/components/card.svelte",
@@ -170,6 +184,7 @@
       "description": "28px sunken box, orange when checked.",
       "dependencies": [],
       "registryDependencies": [
+        "local:bricked-css",
         "local:pixel-icon"
       ],
       "files": [
@@ -186,6 +201,7 @@
       "description": "Removable field tags.",
       "dependencies": [],
       "registryDependencies": [
+        "local:bricked-css",
         "local:pixel-icon"
       ],
       "files": [
@@ -201,7 +217,9 @@
       "title": "Clock",
       "description": "Live 24h dark clock.",
       "dependencies": [],
-      "registryDependencies": [],
+      "registryDependencies": [
+        "local:bricked-css"
+      ],
       "files": [
         {
           "path": "./src/lib/components/clock.svelte",
@@ -215,7 +233,9 @@
       "title": "Code block",
       "description": "Dark code with keyword/string tinting.",
       "dependencies": [],
-      "registryDependencies": [],
+      "registryDependencies": [
+        "local:bricked-css"
+      ],
       "files": [
         {
           "path": "./src/lib/components/code-block.svelte",
@@ -230,6 +250,7 @@
       "description": "Minus/plus stepper around a value box.",
       "dependencies": [],
       "registryDependencies": [
+        "local:bricked-css",
         "local:pixel-icon"
       ],
       "files": [
@@ -245,7 +266,9 @@
       "title": "Data table",
       "description": "Orange header table.",
       "dependencies": [],
-      "registryDependencies": [],
+      "registryDependencies": [
+        "local:bricked-css"
+      ],
       "files": [
         {
           "path": "./src/lib/components/data-table.svelte",
@@ -260,6 +283,7 @@
       "description": "Rollable 72px die.",
       "dependencies": [],
       "registryDependencies": [
+        "local:bricked-css",
         "local:button",
         "local:pixel-icon"
       ],
@@ -276,7 +300,9 @@
       "title": "Divider",
       "description": "Pixel dashed divider with label.",
       "dependencies": [],
-      "registryDependencies": [],
+      "registryDependencies": [
+        "local:bricked-css"
+      ],
       "files": [
         {
           "path": "./src/lib/components/divider.svelte",
@@ -291,6 +317,7 @@
       "description": "Trigger plus dark menu list.",
       "dependencies": [],
       "registryDependencies": [
+        "local:bricked-css",
         "local:button",
         "local:pixel-icon"
       ],
@@ -308,6 +335,7 @@
       "description": "File drop label plus compact file input.",
       "dependencies": [],
       "registryDependencies": [
+        "local:bricked-css",
         "local:pixel-icon"
       ],
       "files": [
@@ -324,6 +352,7 @@
       "description": "Sunken empty slot with icon, text and action.",
       "dependencies": [],
       "registryDependencies": [
+        "local:bricked-css",
         "local:pixel-icon"
       ],
       "files": [
@@ -339,7 +368,9 @@
       "title": "Field",
       "description": "Label, control wrapper and hint/error line.",
       "dependencies": [],
-      "registryDependencies": [],
+      "registryDependencies": [
+        "local:bricked-css"
+      ],
       "files": [
         {
           "path": "./src/lib/components/field.svelte",
@@ -354,6 +385,7 @@
       "description": "Random answer box.",
       "dependencies": [],
       "registryDependencies": [
+        "local:bricked-css",
         "local:button"
       ],
       "files": [
@@ -369,7 +401,9 @@
       "title": "Health meter",
       "description": "Ten-segment HP bar.",
       "dependencies": [],
-      "registryDependencies": [],
+      "registryDependencies": [
+        "local:bricked-css"
+      ],
       "files": [
         {
           "path": "./src/lib/components/health-meter.svelte",
@@ -384,6 +418,7 @@
       "description": "Sunken field input plus search and date variants.",
       "dependencies": [],
       "registryDependencies": [
+        "local:bricked-css",
         "local:pixel-icon"
       ],
       "files": [
@@ -403,7 +438,9 @@
       "title": "Keycap",
       "description": "Field kbd chips with separators.",
       "dependencies": [],
-      "registryDependencies": [],
+      "registryDependencies": [
+        "local:bricked-css"
+      ],
       "files": [
         {
           "path": "./src/lib/components/keycap.svelte",
@@ -418,6 +455,7 @@
       "description": "Sky box with flying rocket.",
       "dependencies": [],
       "registryDependencies": [
+        "local:bricked-css",
         "local:button",
         "local:pixel-icon"
       ],
@@ -435,6 +473,7 @@
       "description": "Field-surface like with heart burst and count.",
       "dependencies": [],
       "registryDependencies": [
+        "local:bricked-css",
         "local:pixel-icon"
       ],
       "files": [
@@ -450,7 +489,9 @@
       "title": "List group",
       "description": "Selectable field list.",
       "dependencies": [],
-      "registryDependencies": [],
+      "registryDependencies": [
+        "local:bricked-css"
+      ],
       "files": [
         {
           "path": "./src/lib/components/list-group.svelte",
@@ -465,6 +506,7 @@
       "description": "Overlay dialog. See also sheet, drawer, alert-dialog.",
       "dependencies": [],
       "registryDependencies": [
+        "local:bricked-css",
         "local:pixel-icon"
       ],
       "files": [
@@ -481,6 +523,7 @@
       "description": "Page buttons with prev/next.",
       "dependencies": [],
       "registryDependencies": [
+        "local:bricked-css",
         "local:pixel-icon"
       ],
       "files": [
@@ -496,7 +539,9 @@
       "title": "Progress",
       "description": "Segmented bar plus square ring gauge.",
       "dependencies": [],
-      "registryDependencies": [],
+      "registryDependencies": [
+        "local:bricked-css"
+      ],
       "files": [
         {
           "path": "./src/lib/components/progress.svelte",
@@ -511,6 +556,7 @@
       "description": "Octagon radio with dot icon.",
       "dependencies": [],
       "registryDependencies": [
+        "local:bricked-css",
         "local:pixel-icon"
       ],
       "files": [
@@ -527,6 +573,7 @@
       "description": "Five star radio buttons.",
       "dependencies": [],
       "registryDependencies": [
+        "local:bricked-css",
         "local:pixel-icon"
       ],
       "files": [
@@ -542,7 +589,9 @@
       "title": "Ring loader",
       "description": "Blinking 8-cube ring, plain or with label.",
       "dependencies": [],
-      "registryDependencies": [],
+      "registryDependencies": [
+        "local:bricked-css"
+      ],
       "files": [
         {
           "path": "./src/lib/components/ring-loader.svelte",
@@ -557,6 +606,7 @@
       "description": "Native select plus styled native-select variant.",
       "dependencies": [],
       "registryDependencies": [
+        "local:bricked-css",
         "local:pixel-icon"
       ],
       "files": [
@@ -572,7 +622,9 @@
       "title": "Skeleton",
       "description": "Pulsing box plus lines.",
       "dependencies": [],
-      "registryDependencies": [],
+      "registryDependencies": [
+        "local:bricked-css"
+      ],
       "files": [
         {
           "path": "./src/lib/components/skeleton.svelte",
@@ -586,7 +638,9 @@
       "title": "Slider",
       "description": "Range with orange fill and ink thumb.",
       "dependencies": [],
-      "registryDependencies": [],
+      "registryDependencies": [
+        "local:bricked-css"
+      ],
       "files": [
         {
           "path": "./src/lib/components/slider.svelte",
@@ -600,7 +654,9 @@
       "title": "Stacking loader",
       "description": "Three dropping bricks.",
       "dependencies": [],
-      "registryDependencies": [],
+      "registryDependencies": [
+        "local:bricked-css"
+      ],
       "files": [
         {
           "path": "./src/lib/components/stacking-loader.svelte",
@@ -614,7 +670,9 @@
       "title": "Stat card",
       "description": "Dark stat with label, value and badge slot.",
       "dependencies": [],
-      "registryDependencies": [],
+      "registryDependencies": [
+        "local:bricked-css"
+      ],
       "files": [
         {
           "path": "./src/lib/components/stat.svelte",
@@ -629,6 +687,7 @@
       "description": "Numbered steps with connectors.",
       "dependencies": [],
       "registryDependencies": [
+        "local:bricked-css",
         "local:pixel-icon"
       ],
       "files": [
@@ -644,7 +703,9 @@
       "title": "Switch",
       "description": "Off/On two-half track switch plus single toggle.",
       "dependencies": [],
-      "registryDependencies": [],
+      "registryDependencies": [
+        "local:bricked-css"
+      ],
       "files": [
         {
           "path": "./src/lib/components/switch.svelte",
@@ -658,7 +719,9 @@
       "title": "Tabs",
       "description": "Brick tabs with sunken field panel.",
       "dependencies": [],
-      "registryDependencies": [],
+      "registryDependencies": [
+        "local:bricked-css"
+      ],
       "files": [
         {
           "path": "./src/lib/components/tabs.svelte",
@@ -672,7 +735,9 @@
       "title": "Textarea",
       "description": "Sunken multiline field.",
       "dependencies": [],
-      "registryDependencies": [],
+      "registryDependencies": [
+        "local:bricked-css"
+      ],
       "files": [
         {
           "path": "./src/lib/components/textarea.svelte",
@@ -686,7 +751,9 @@
       "title": "Timeline",
       "description": "Markers with shade connectors.",
       "dependencies": [],
-      "registryDependencies": [],
+      "registryDependencies": [
+        "local:bricked-css"
+      ],
       "files": [
         {
           "path": "./src/lib/components/timeline.svelte",
@@ -701,6 +768,7 @@
       "description": "Dark toast with icon and dismiss.",
       "dependencies": [],
       "registryDependencies": [
+        "local:bricked-css",
         "local:pixel-icon"
       ],
       "files": [
@@ -716,7 +784,9 @@
       "title": "Tooltip",
       "description": "Dark bubble on hover/focus.",
       "dependencies": [],
-      "registryDependencies": [],
+      "registryDependencies": [
+        "local:bricked-css"
+      ],
       "files": [
         {
           "path": "./src/lib/components/tooltip.svelte",
@@ -730,7 +800,9 @@
       "title": "Typewriter",
       "description": "Char reveal with caret.",
       "dependencies": [],
-      "registryDependencies": [],
+      "registryDependencies": [
+        "local:bricked-css"
+      ],
       "files": [
         {
           "path": "./src/lib/components/typewriter.svelte",
@@ -746,6 +818,7 @@
       "dependencies": [],
       "registryDependencies": [
         "local:badge",
+        "local:bricked-css",
         "local:button",
         "local:pixel-icon"
       ],
